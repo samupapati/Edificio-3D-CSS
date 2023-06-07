@@ -1,0 +1,646 @@
+*{
+    margin: 0; padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+
+#predio{
+    width: 900px;
+    height: 900px;
+    background-color: bisque;
+    position: relative;
+}
+
+.chao{
+    width: 500px;
+    height: 500px;
+    background-color: black;
+    position: absolute;
+    transform:
+        rotateX(70deg)
+        rotateZ(45deg);
+    bottom: 0;
+    left: 0; right: 0;
+    margin: 0 auto;
+}
+
+.chao-baixo{
+    width: 374px;
+    height: 10px;
+    background-color: gray;
+    position: absolute;
+    transform: 
+        rotate(19deg)
+        skewX(20deg)
+        ;
+    left: 87px;
+    bottom: 180px;
+}
+
+.chao-baixo:last-child{
+    background-color: rgb(66, 66, 66);
+    transform: 
+        rotate(-19deg)
+        skewX(-20deg)    
+    ;
+    left: initial;
+    right: 86px;
+}
+
+
+
+
+
+
+
+
+/* Bloco 1 */
+.bloco-1-frente{
+    width: 100px;
+    height: 350px;
+    background-color: rgb(138, 106, 153);
+    position: absolute;
+    transform: 
+        rotate(20deg)
+        skewX(20deg)
+    ;
+    bottom: 250px;
+    left: 200px;
+}
+
+.bloco-1-lado{
+    width: 162px;
+    height: 350px;
+    background-color: rgb(214, 214, 214);
+    position: absolute;
+    transform: 
+        rotate(20deg)
+        skewX(20deg)
+        skewY(-33deg)
+    ;
+    bottom: 261px;
+    left: 292px;
+
+    z-index: 2;
+}
+
+.bloco-1-teto-baixo-esquerda{
+    width: 100px;
+    height: 15px;
+    background-color: gray;
+    position: absolute;
+    transform: 
+        rotate(20deg)
+        skewX(-50deg)
+    ;
+    bottom: 607px;
+    left: 211px;
+
+    z-index: 2;
+}
+
+.bloco-1-teto-cima-esquerda{
+    width: 150px;
+    height: 15px;
+    background-color: gray;
+    position: absolute;
+    transform: 
+        rotate(-20deg)
+        skewX(50deg)
+        /* skewY(-33deg) */
+    ;
+    bottom: 646px;
+    left: 220px;
+}
+
+.bloco-1-teto-parede-esquerda{
+    width: 130px;
+    height: 15px;
+    background-color: rgb(214, 214, 214);
+    position: absolute;
+    transform: 
+        rotate(20.5deg)
+        skewX(20deg)
+        skewY(-33deg)
+    ;
+    bottom: 635px;
+    left: 242px;
+}
+
+.bloco-1-tijolo-frente{
+    width: 60px;
+    height: 50px;
+    background-image: linear-gradient(to top, #976d1d, #c07c2f);
+    position: absolute;
+    transform: 
+        rotate(20deg)
+        skewX(20deg)
+    ;
+    bottom: 600px;
+    left: 270px;
+
+    z-index: 0;
+}
+
+.bloco-1-tijolo-teto{
+    width: 60px;
+    height: 10px;
+    background-color: #6e481b;
+    position: absolute;
+    transform: 
+        rotate(20deg)
+        skewX(-50deg)
+    ;
+    bottom: 649px;
+    left: 277px;
+
+    z-index: 0;
+}
+
+.bloco-1-tijolo-lado{
+    width: 15px;
+    height: 60px;
+    background-color: #c5883d;
+    position: absolute;
+    transform: 
+        rotate(-20deg)
+        skewX(-20deg)
+    ;
+    bottom: 582px;
+    left: 327px;
+
+    z-index: 0;
+}
+
+.bloco-1-teto-chao{
+    width: 100px;
+    height: 180px;
+    background-color: black;
+    position: absolute;
+    transform:
+        rotateX(70deg)
+        rotateZ(45deg);
+    bottom: 540px;
+    left: 300px;
+}
+
+.bloco-1-teto-baixo-direita{
+    width: 162px;
+    height: 15px;
+    background-color: gray;
+    position: absolute;
+    transform: 
+        rotate(-20deg)
+        skewX(50deg)
+    ;
+    bottom: 618px;
+    left: 281px;
+}
+
+.bloco-1-teto-parede-direita{
+    width: 70px;
+    height: 15px;
+    background-color: rgb(214, 214, 214);
+    position: absolute;
+    transform: 
+        rotate(20.5deg)
+        skewX(20deg)
+    ;
+    bottom: 640px;
+    left: 353px;
+}
+
+.bloco-1-teto-cima-direita{
+    width: 95px;
+    height: 15px;
+    background-color: gray;
+    position: absolute;
+    transform: 
+        rotate(20deg)
+        skewX(-50deg)
+    ;
+    bottom: 654px;
+    left: 346px;
+}
+
+
+
+
+
+
+
+
+
+/*Bloco 2*/
+.bloco-2-frente-esquerda{
+    width: 160px;
+    height: 300px;
+    background-color: rgb(248, 246, 246);
+    position: absolute;
+    transform: 
+        rotate(20deg)
+        skewX(20deg)
+    ;
+    bottom: 210px;
+    left: 298px;
+
+    z-index: 3;
+}
+
+.bloco-2-frente-direita{
+    width: 160px;
+    height: 300px;
+    background-color: rgb(241, 235, 235);
+    position: absolute;
+    transform: 
+        rotate(-20deg)
+        skewX(-20deg)
+    ;
+    bottom: 210px;
+    left: 445px;
+
+
+    z-index: 3;
+}
+
+.bloco-2-teto-chao-1{
+    width: 210px;
+    height: 132px;
+    background-color: black;
+    position: absolute;
+    transform:
+        rotateX(70deg)
+        rotateZ(45deg);
+    bottom: 530px;
+    left: 408px;
+    
+    
+
+}
+
+.bloco-2-teto-chao-2{
+    width: 210px;
+    height: 210px;
+    background-color: black;
+    position: absolute;
+    transform:
+        rotateX(70deg)
+        rotateZ(45deg);
+    bottom: 430px;
+    left: 346px;
+    
+    
+    z-index: 3;
+}
+
+.bloco-2-teto-baixo-esquerda{
+    width: 155px;
+    height: 10px;
+    background-color: gray;
+    position: absolute;
+    transform: 
+        rotate(20deg)
+        skewX(-50deg)
+    ;
+    bottom: 516px;
+    left: 306px;
+
+    z-index: 3;
+}
+
+.bloco-2-teto-baixo-direita{
+    width: 155px;
+    height: 10px;
+    background-color: gray;
+    position: absolute;
+    transform: 
+        rotate(-20deg)
+        skewX(50deg)
+    ;
+    bottom: 518px;
+    left: 444px;
+
+    z-index: 3;
+}
+
+.bloco-2-teto-parede-esquerda{
+    width: 60px;
+    height: 15px;
+    background-color: rgb(214, 214, 214);
+    position: absolute;
+    transform: 
+        rotate(20.5deg)
+        skewX(20deg)
+        skewY(-33deg)
+    ;
+    bottom: 626px;
+    left: 426px;
+
+    z-index: 0;
+}
+
+.bloco-2-teto-parede-direita{
+    width: 70px;
+    height: 15px;
+    background-color: rgb(214, 214, 214);
+    position: absolute;
+    transform: 
+        rotate(20.5deg)
+        skewX(20deg)
+    ;
+    bottom: 624px;
+    left: 482px;
+
+    z-index: 0;
+}
+
+.bloco-2-teto-cima-esquerda{
+    width: 70px;
+    height: 5px;
+    background-color: gray;
+    position: absolute;
+    transform: 
+        rotate(-20deg)
+        skewX(50deg)
+        /* skewY(-33deg) */
+    ;
+    bottom: 638px;
+    left: 412px;
+
+    z-index: 0;
+}
+
+.bloco-2-teto-cima-direita{
+    width: 95px;
+    height: 5px;
+    background-color: gray;
+    position: absolute;
+    transform: 
+        rotate(20deg)
+        skewX(-50deg)
+    ;
+    bottom: 635px;
+    left: 473px;
+
+    z-index: 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*Bloco 3*/
+.bloco-3-frente{
+    width: 100px;
+    height: 350px;
+    background-color: rgb(138, 106, 153);
+    position: absolute;
+    transform: 
+        rotate(-20deg)
+        skewX(-20deg)
+    ;
+    bottom: 250px;
+    left: 630px;
+}
+
+.bloco-3-lado{
+    width: 100px;
+    height: 350px;
+    background-color: rgb(126, 94, 141);
+    position: absolute;
+    transform: 
+        rotate(20deg)
+        skewX(20deg)
+    ;
+    bottom: 250px;
+    left: 537px;
+}
+
+.bloco-3-teto-chao{
+    width: 132px;
+    height: 132px;
+    background-color: rgb(95, 69, 107);
+    position: absolute;
+    transform:
+        rotateX(70deg)
+        rotateZ(45deg);
+    bottom: 562px;
+    left: 568px;
+}
+
+.bloco-3-caixa-frente{
+    width: 60px;
+    height: 20px;
+    background-color: #8f8e8e;
+    position: absolute;
+    transform: 
+        rotate(20deg)
+        skewX(20deg)
+    ;
+    bottom: 635px;
+    left: 610px;
+}
+
+.bloco-3-caixa-teto{
+    width: 60px;
+    height: 10px;
+    background-color: #777777;
+    position: absolute;
+    transform: 
+        rotate(20deg)
+        skewX(-50deg)
+    ;
+    bottom: 653px;
+    left: 617px;
+}
+
+.bloco-3-caixa-lado{
+    width: 15px;
+    height: 20px;
+    background-color: #9e9d9d;
+    position: absolute;
+    transform: 
+        rotate(-20deg)
+        skewX(-20deg)
+    ;
+    bottom: 628px;
+    left: 667px;
+}
+
+.bloco-3-tijolo-frente{
+    width: 70px;
+    height: 70px;
+    background-image: linear-gradient(to top, #976d1d, #c07c2f);
+    position: absolute;
+    transform: 
+        rotate(-20deg)
+        skewX(-20deg)
+    ;
+    bottom: 500px;
+    left: 655px;
+}
+
+.bloco-3-tijolo-teto{
+    width: 70px;
+    height: 10px;
+    background-color: #6e481b;
+    position: absolute;
+    transform: 
+        rotate(-20deg)
+        skewX(50deg)
+    ;
+    bottom: 569px;
+    left: 649px;
+}
+
+.bloco-3-tijolo-lado{
+    width: 10px;
+    height: 70px;
+    background-color: #c5883d;
+    position: absolute;
+    transform: 
+        rotate(20deg)
+        skewX(20deg)
+    ;
+    bottom: 490px;
+    left: 647px;
+}
+
+.bloco-3-garagem-chao{
+    width: 60px;
+    height: 10px;
+    background-color: black;
+    position: absolute;
+    transform: 
+        rotate(-20deg)
+        skewX(50deg)
+    ;
+    bottom: 239px;
+    left: 650px;
+}
+
+.bloco-3-garagem-portao{
+    width: 60px;
+    height: 70px;
+    background-color: aqua;
+    position: absolute;
+    transform: 
+        rotate(-20deg)
+        skewX(-20deg)
+    ;
+    bottom: 250px;
+    left: 643px;
+}
+
+.bloco-3-garagem-teto-frente{
+    width: 70px;
+    height: 20px;
+    background-color: white;
+    position: absolute;
+    transform: 
+        rotate(-20deg)
+        skewX(-20deg)
+    ;
+    bottom: 300px;
+    left: 655px;
+}
+
+.bloco-3-garagem-teto-teto{
+    width: 70px;
+    height: 10px;
+    background-color: white;
+    position: absolute;
+    transform: 
+        rotate(-20deg)
+        skewX(50deg)
+    ;
+    bottom: 318px;
+    left: 648px;
+}
+
+.bloco-3-garagem-teto-lado{
+    width: 15px;
+    height: 20px;
+    background-color: white;
+    position: absolute;
+    transform: 
+        rotate(20deg)
+        skewX(20deg)
+    ;
+    bottom: 291px;
+    left: 643px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.grama-frente{
+    width: 100px;
+    height: 40px;
+    background-color: rgb(168, 247, 51);
+    position: absolute;
+    transform: 
+        rotate(-20deg)
+        skewX(-20deg)
+    ;
+    bottom: 185px;
+    left: 525px;
+
+    z-index: 4;
+}
+
+.grama-teto{
+    width: 100px;
+    height: 40px;
+    background-color: rgb(154, 230, 41);
+    position: absolute;
+    transform: 
+        rotate(-20deg)
+        skewX(50deg)
+    ;
+    bottom: 216px;
+    left: 496px;
+
+    z-index: 4;
+}
+
+.grama-lado{
+    width: 61px;
+    height: 40px;
+    background-color: greenyellow;
+    position: absolute;
+    transform: 
+        rotate(20deg)
+        skewX(20deg)
+    ;
+    bottom: 178.5px;
+    left: 470px;
+
+    z-index: 4;
+}
