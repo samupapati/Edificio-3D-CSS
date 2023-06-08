@@ -1,3 +1,44 @@
+:root{
+    --chao1: #616163;
+    --chao2: #423F3F;
+    --chao3: #313133;
+    --bloco-roxo1: #886C95;
+    --bloco1-branco1: #FFFEFF;
+    --bloco1-branco2: #F9F9FB;
+    --bloco-parede1: #D4CECA;
+    --bloco-parede2: #FCFAFC;
+    --bloco2-branco1: #EBECF1;
+    --bloco2-branco2: #fff;
+    --bloco2-branco3: #fff;
+    --bloco2-parede1: #999597;
+    --bloco2-parede2: #7F7B7B;
+    --bloco2-parede3: #BFBDC3;
+    --teto1: #ACABAB;
+    --teto2: #D4D2D3;
+    --teto3: #B2B0AE;
+    --bloco3-roxo1: #A586B2;
+    --bloco3-roxo2: #8C6F9A;
+    --caixa1: #4B4A48;
+    --caixa2: #615F62;
+    --caixa3: #59575D;
+    --caixa4: #6B696C;
+    --tijolo1: #FEA63A;
+    --tijolo2: #B3713F;
+    --tijolo3: #FB993E;
+    --teto-garagem1: #B7A9BA;
+    --teto-garagem2: #fff;
+    --chao-garagem: #292929;
+    --portao1: #CAECFF;
+    --portao2: #5F99C3;
+    --grama1: #8AC239;
+    --grama2: #7FA659;
+    --grama3: #7DB43B;
+    --janela1: #8DDBF0;
+    --janela2: #53AFF6;
+    --janela-sombra1: #E0F3FB;
+    --janela-sombra2: #95B7E3;
+}
+
 *{
     margin: 0; padding: 0;
     box-sizing: border-box;
@@ -7,20 +48,22 @@ body{
     width: 100vw;
     display: flex;
     flex-direction: column;
-    align-items: start;
+    align-items: center;
+    background-image: radial-gradient(var(--chao1), var(--chao3));
+    overflow-x: hidden;
 }
 
 #predio{
     width: 900px;
     height: 900px;
-    background-color: bisque;
+    /* background-color: bisque; */
     position: relative;
 }
 
 .chao{
     width: 500px;
     height: 500px;
-    background-color: black;
+    background-image: radial-gradient(var(--chao1) 50%, var(--chao2));
     position: absolute;
     transform:
         rotateX(70deg)
@@ -33,7 +76,7 @@ body{
 .chao-baixo{
     width: 374px;
     height: 10px;
-    background-color: gray;
+    background-color: var(--chao3);
     position: absolute;
     transform: 
         rotate(19deg)
@@ -44,7 +87,7 @@ body{
 }
 
 .chao-baixo:last-child{
-    background-color: rgb(66, 66, 66);
+    background-color: var(--chao3);
     transform: 
         rotate(-19deg)
         skewX(-20deg)    
@@ -64,7 +107,7 @@ body{
 .bloco-1-frente{
     width: 100px;
     height: 350px;
-    background-color: rgb(138, 106, 153);
+    background-color: var(--bloco-roxo1);
     position: absolute;
     transform: 
         rotate(20deg)
@@ -77,7 +120,7 @@ body{
 .bloco-1-lado{
     width: 162px;
     height: 350px;
-    background-color: rgb(214, 214, 214);
+    background-image: linear-gradient(to right, var(--bloco1-branco1), var(--bloco1-branco2));
     position: absolute;
     transform: 
         rotate(20deg)
@@ -93,7 +136,7 @@ body{
 .bloco-1-teto-baixo-esquerda{
     width: 100px;
     height: 15px;
-    background-color: gray;
+    background-color: var(--teto3);
     position: absolute;
     transform: 
         rotate(20deg)
@@ -108,7 +151,7 @@ body{
 .bloco-1-teto-cima-esquerda{
     width: 150px;
     height: 15px;
-    background-color: gray;
+    background-color: var(--teto3);
     position: absolute;
     transform: 
         rotate(-20deg)
@@ -122,7 +165,7 @@ body{
 .bloco-1-teto-parede-esquerda{
     width: 130px;
     height: 15px;
-    background-color: rgb(214, 214, 214);
+    background-image: linear-gradient(to right, var(--bloco-parede1), var(--bloco-parede2));
     position: absolute;
     transform: 
         rotate(20.5deg)
@@ -136,7 +179,7 @@ body{
 .bloco-1-tijolo-frente{
     width: 60px;
     height: 50px;
-    background-image: linear-gradient(to top, #976d1d, #c07c2f);
+    background-image: linear-gradient(to top, gray 1%, var(--tijolo1) 99%);
     position: absolute;
     transform: 
         rotate(20deg)
@@ -151,7 +194,7 @@ body{
 .bloco-1-tijolo-teto{
     width: 60px;
     height: 10px;
-    background-color: #6e481b;
+    background-color: var(--tijolo2);
     position: absolute;
     transform: 
         rotate(20deg)
@@ -166,7 +209,7 @@ body{
 .bloco-1-tijolo-lado{
     width: 15px;
     height: 60px;
-    background-color: #c5883d;
+    background-image: linear-gradient(to top, black, var(--tijolo1));
     position: absolute;
     transform: 
         rotate(-20deg)
@@ -181,7 +224,7 @@ body{
 .bloco-1-teto-chao{
     width: 100px;
     height: 180px;
-    background-color: black;
+    background-image: radial-gradient(var(--chao1), var(--chao2));
     position: absolute;
     transform:
         rotateX(70deg)
@@ -193,7 +236,7 @@ body{
 .bloco-1-teto-baixo-direita{
     width: 162px;
     height: 15px;
-    background-color: gray;
+    background-color: var(--teto3);
     position: absolute;
     transform: 
         rotate(-20deg)
@@ -206,7 +249,7 @@ body{
 .bloco-1-teto-parede-direita{
     width: 70px;
     height: 15px;
-    background-color: rgb(214, 214, 214);
+    background-image: linear-gradient(to left, var(--bloco-parede1), var(--bloco-parede2));
     position: absolute;
     transform: 
         rotate(20.5deg)
@@ -219,7 +262,7 @@ body{
 .bloco-1-teto-cima-direita{
     width: 95px;
     height: 15px;
-    background-color: gray;
+    background-color: var(--teto3);
     position: absolute;
     transform: 
         rotate(20deg)
@@ -229,7 +272,70 @@ body{
     left: 346px;
 }
 
+.bloco-1-janelas{
+    position: relative;
+}
 
+#bloco-1-janelas-1{
+    bottom: -406px;
+    left: 240px;
+}
+
+#bloco-1-janelas-2{
+    bottom: -466px;
+    left: 240px;
+}
+
+#bloco-1-janelas-3{
+    bottom: -526px;
+    left: 240px;
+}
+
+.bloco-1-janelas-janela{
+    width: 70px;
+    height: 30px;
+    background-image: linear-gradient(to left, var(--janela2), var(--janela1));
+    position: absolute;
+    transform: 
+        rotate(20deg)
+        skewX(20deg)
+    ;
+    bottom: 0px;
+    left: -20px;
+
+    z-index: 3;
+}
+
+.bloco-1-janelas-parede-baixo{
+    width: 70px;
+    height: 7px;
+    background-image: linear-gradient(to left, var(--janela-sombra2), var(--janela-sombra1));
+    position: absolute;
+    transform: 
+        rotate(20deg)
+        skewX(-50deg)
+    ;
+    bottom: -6px;
+    left: -24px;
+
+    z-index: 3;
+}
+
+.bloco-1-janelas-parede-cima{
+    width: 10px;
+    height: 30px;
+    background-image: linear-gradient(to bottom, var(--janela-sombra2), var(--janela-sombra1));
+    position: absolute;
+    transform: 
+        rotate(-20deg)
+        skewX(-20deg)
+    ;
+    bottom: 10px;
+    left: -27px;
+
+
+    z-index: 3;
+}
 
 
 
@@ -241,7 +347,7 @@ body{
 .bloco-2-frente-esquerda{
     width: 160px;
     height: 300px;
-    background-color: rgb(248, 246, 246);
+    background-image: linear-gradient(to left, var(--bloco2-branco1) 10%, var(--bloco2-branco2));
     position: absolute;
     transform: 
         rotate(20deg)
@@ -256,7 +362,7 @@ body{
 .bloco-2-frente-direita{
     width: 160px;
     height: 300px;
-    background-color: rgb(241, 235, 235);
+    background-color: var(--bloco2-branco3);
     position: absolute;
     transform: 
         rotate(-20deg)
@@ -272,13 +378,14 @@ body{
 .bloco-2-teto-chao-1{
     width: 210px;
     height: 132px;
-    background-color: black;
+    background-color: var(--chao2);
+
     position: absolute;
     transform:
         rotateX(70deg)
         rotateZ(45deg);
     bottom: 530px;
-    left: 408px;
+    left: 407px;
     
     
 
@@ -287,7 +394,8 @@ body{
 .bloco-2-teto-chao-2{
     width: 210px;
     height: 210px;
-    background-color: black;
+    background-image: linear-gradient(to top, var(--chao1) 40%, var(--chao2));
+
     position: absolute;
     transform:
         rotateX(70deg)
@@ -302,7 +410,7 @@ body{
 .bloco-2-teto-baixo-esquerda{
     width: 155px;
     height: 10px;
-    background-color: gray;
+    background-image: linear-gradient(to top, var(--teto1), var(--teto2));
     position: absolute;
     transform: 
         rotate(20deg)
@@ -317,7 +425,7 @@ body{
 .bloco-2-teto-baixo-direita{
     width: 155px;
     height: 10px;
-    background-color: gray;
+    background-image: linear-gradient(to top, var(--teto1), var(--teto2));
     position: absolute;
     transform: 
         rotate(-20deg)
@@ -332,7 +440,7 @@ body{
 .bloco-2-teto-parede-esquerda{
     width: 60px;
     height: 15px;
-    background-color: rgb(214, 214, 214);
+    background-color: var(--bloco2-parede1);
     position: absolute;
     transform: 
         rotate(20.5deg)
@@ -348,7 +456,7 @@ body{
 .bloco-2-teto-parede-direita{
     width: 70px;
     height: 15px;
-    background-color: rgb(214, 214, 214);
+    background-image: linear-gradient(to right, var(--bloco2-parede2), var(--bloco2-parede3));
     position: absolute;
     transform: 
         rotate(20.5deg)
@@ -363,7 +471,7 @@ body{
 .bloco-2-teto-cima-esquerda{
     width: 70px;
     height: 5px;
-    background-color: gray;
+    background-color: var(--teto3);
     position: absolute;
     transform: 
         rotate(-20deg)
@@ -379,7 +487,7 @@ body{
 .bloco-2-teto-cima-direita{
     width: 95px;
     height: 5px;
-    background-color: gray;
+    background-color: var(--teto3);
     position: absolute;
     transform: 
         rotate(20deg)
@@ -391,15 +499,161 @@ body{
     z-index: 0;
 }
 
+.bloco-2-janelas{
+    position: relative;
+    z-index: 3;
+}
+
+#bloco-2-janelas-1{
+    bottom: -430px;
+    left: 447px;
+}
+
+#bloco-2-janelas-2{
+    bottom: -490px;
+    left: 447px;
+}
+
+#bloco-2-janelas-3{
+    bottom: -550px;
+    left: 447px;
+}
+
+.bloco-2-janelas-canto-direito{
+    width: 80px;
+    height: 30px;
+    background-image: linear-gradient(to right, var(--janela2), var(--janela1));
+    position: absolute;
+    transform: 
+        rotate(-20deg)
+        skewX(-20deg)
+    ;
 
 
+    z-index: 3;
+}
+
+.bloco-2-janelas-canto-esquerdo{
+    width: 80px;
+    height: 30px;
+    background-image: linear-gradient(to left, var(--janela2), var(--janela1));
+    position: absolute;
+    transform: 
+        rotate(20deg)
+        skewX(20deg)
+    ;
+    bottom: -30px;
+    left: -75px;
+
+    z-index: 3;
+}
+
+.bloco-2-janelas-canto-direito-parede-cima{
+    width: 10px;
+    height: 30px;
+    background-image: linear-gradient(to bottom, var(--janela-sombra2), var(--janela-sombra1));
+    position: absolute;
+    transform: 
+        rotate(20deg)
+        skewX(20deg)
+    ;
+    bottom: -17px;
+    left: 77px;
+
+    z-index: 3;
+}
+
+.bloco-2-janelas-canto-direito-parede-baixo{
+    width: 90px;
+    height: 7px;
+    background-image: linear-gradient(to right, var(--janela-sombra2), var(--janela-sombra1));
+    position: absolute;
+    transform: 
+        rotate(-20deg)
+        skewX(50deg)
+    ;
+    bottom: -37px;
+    left: -5px;
+
+    z-index: 3;
+}
+
+.bloco-2-janelas-canto-esquerdo-parede-baixo{
+    width: 90px;
+    height: 7px;
+    background-image: linear-gradient(to left, var(--janela-sombra2), var(--janela-sombra1));
+    position: absolute;
+    transform: 
+        rotate(20deg)
+        skewX(-50deg)
+    ;
+    bottom: -38px;
+    left: -81px;
+
+    z-index: 3;
+}
+
+.bloco-2-janelas-canto-esquerdo-parede-cima{
+    width: 10px;
+    height: 30px;
+    background-image: linear-gradient(to bottom, var(--janela-sombra2), var(--janela-sombra1));
+    position: absolute;
+    transform: 
+        rotate(-20deg)
+        skewX(-20deg)
+    ;
+    bottom: -18px;
+    left: -83px;
 
 
+    z-index: 3;
+}
+
+.bloco-2-janelas-esquerda{
+    width: 40px;
+    height: 30px;
+    background-image: linear-gradient(to left, var(--janela2), var(--janela1));
+    position: absolute;
+    transform: 
+        rotate(20deg)
+        skewX(20deg)
+    ;
+    bottom: -3px;
+    left: -135px;
+
+    z-index: 3;
+}
+
+.bloco-2-janelas-esquerda-parede-baixo{
+    width: 40px;
+    height: 7px;
+    background-image: linear-gradient(to left, var(--janela-sombra2), var(--janela-sombra1));
+    position: absolute;
+    transform: 
+        rotate(20deg)
+        skewX(-50deg)
+    ;
+    bottom: -9px;
+    left: -140px;
+
+    z-index: 3;
+}
+
+.bloco-2-janelas-esquerda-parede-cima{
+    width: 10px;
+    height: 30px;
+    background-image: linear-gradient(to bottom, var(--janela-sombra2), var(--janela-sombra1));
+    position: absolute;
+    transform: 
+        rotate(-20deg)
+        skewX(-20deg)
+    ;
+    bottom: 2px;
+    left: -144px;
 
 
-
-
-
+    z-index: 3;
+}
 
 
 
@@ -407,7 +661,7 @@ body{
 .bloco-3-frente{
     width: 100px;
     height: 350px;
-    background-color: rgb(138, 106, 153);
+    background-image: linear-gradient(to top, var(--bloco3-roxo2), var(--bloco3-roxo1));
     position: absolute;
     transform: 
         rotate(-20deg)
@@ -420,7 +674,7 @@ body{
 .bloco-3-lado{
     width: 100px;
     height: 350px;
-    background-color: rgb(126, 94, 141);
+    background-image: radial-gradient(var(--bloco3-roxo1) 40%, var(--bloco3-roxo2));
     position: absolute;
     transform: 
         rotate(20deg)
@@ -433,7 +687,7 @@ body{
 .bloco-3-teto-chao{
     width: 132px;
     height: 132px;
-    background-color: rgb(95, 69, 107);
+    background-color: var(--bloco-roxo1);
     position: absolute;
     transform:
         rotateX(70deg)
@@ -442,10 +696,19 @@ body{
     left: 568px;
 }
 
+.bloco-3-teto-chao-2{
+    width: 180px;
+    height: 132px;
+    background-color: var(--bloco-roxo1);
+    position: absolute;
+    bottom: 490px;
+    left: 545px;
+}
+
 .bloco-3-caixa-frente{
     width: 60px;
     height: 20px;
-    background-color: #8f8e8e;
+    background-image: linear-gradient(to bottom, var(--caixa2), var(--caixa3));
     position: absolute;
     transform: 
         rotate(20deg)
@@ -458,7 +721,7 @@ body{
 .bloco-3-caixa-teto{
     width: 60px;
     height: 10px;
-    background-color: #777777;
+    background-color: var(--caixa1);
     position: absolute;
     transform: 
         rotate(20deg)
@@ -471,7 +734,7 @@ body{
 .bloco-3-caixa-lado{
     width: 15px;
     height: 20px;
-    background-color: #9e9d9d;
+    background-color: var(--caixa4);
     position: absolute;
     transform: 
         rotate(-20deg)
@@ -484,7 +747,7 @@ body{
 .bloco-3-tijolo-frente{
     width: 70px;
     height: 70px;
-    background-image: linear-gradient(to top, #976d1d, #c07c2f);
+    background-color: var(--tijolo1);
     position: absolute;
     transform: 
         rotate(-20deg)
@@ -497,7 +760,7 @@ body{
 .bloco-3-tijolo-teto{
     width: 70px;
     height: 10px;
-    background-color: #6e481b;
+    background-color: var(--tijolo2);
     position: absolute;
     transform: 
         rotate(-20deg)
@@ -510,20 +773,20 @@ body{
 .bloco-3-tijolo-lado{
     width: 10px;
     height: 70px;
-    background-color: #c5883d;
+    background-image: linear-gradient(to top, var(--tijolo1), var(--tijolo3));
     position: absolute;
     transform: 
         rotate(20deg)
         skewX(20deg)
     ;
     bottom: 490px;
-    left: 647px;
+    left: 648px;
 }
 
 .bloco-3-garagem-chao{
     width: 60px;
     height: 10px;
-    background-color: black;
+    background-color: var(--chao-garagem);
     position: absolute;
     transform: 
         rotate(-20deg)
@@ -533,10 +796,24 @@ body{
     left: 650px;
 }
 
+.bloco-3-garagem-chao-2{
+    width: 15px;
+    height: 15px;
+    background-color: var(--chao-garagem);
+    position: absolute;
+    transform: 
+        rotate(0deg)
+        skewX(0deg)
+    ;
+    bottom: 225px;
+    left: 645px;
+}
+
 .bloco-3-garagem-portao{
     width: 60px;
     height: 70px;
-    background-color: aqua;
+    background-image: linear-gradient(to right, var(--portao2), var(--portao1));
+    background-size: 250% 250%;
     position: absolute;
     transform: 
         rotate(-20deg)
@@ -549,7 +826,7 @@ body{
 .bloco-3-garagem-teto-frente{
     width: 70px;
     height: 20px;
-    background-color: white;
+    background-color: var(--teto-garagem2);
     position: absolute;
     transform: 
         rotate(-20deg)
@@ -562,7 +839,7 @@ body{
 .bloco-3-garagem-teto-teto{
     width: 70px;
     height: 10px;
-    background-color: white;
+    background-color: var(--teto-garagem1);
     position: absolute;
     transform: 
         rotate(-20deg)
@@ -575,7 +852,7 @@ body{
 .bloco-3-garagem-teto-lado{
     width: 15px;
     height: 20px;
-    background-color: white;
+    background-color: var(--teto-garagem2);
     position: absolute;
     transform: 
         rotate(20deg)
@@ -598,49 +875,53 @@ body{
 
 
 
-
+#grama{
+    position: relative;
+    bottom: -707px;
+    left: 530px;
+}
 
 .grama-frente{
     width: 100px;
     height: 40px;
-    background-color: rgb(168, 247, 51);
+    background-color: var(--grama1);
     position: absolute;
     transform: 
         rotate(-20deg)
         skewX(-20deg)
     ;
-    bottom: 185px;
-    left: 525px;
+    bottom: 0px;
+    left: 0px;
 
     z-index: 4;
 }
 
 .grama-teto{
     width: 100px;
-    height: 40px;
-    background-color: rgb(154, 230, 41);
+    height: 25px;
+    background-color: var(--grama2);
     position: absolute;
     transform: 
         rotate(-20deg)
         skewX(50deg)
     ;
-    bottom: 216px;
-    left: 496px;
+    bottom: 35px;
+    left: -18px;
 
     z-index: 4;
 }
 
 .grama-lado{
-    width: 61px;
+    width: 39px;
     height: 40px;
-    background-color: greenyellow;
+    background-color: var(--grama3);
     position: absolute;
     transform: 
         rotate(20deg)
         skewX(20deg)
     ;
-    bottom: 178.5px;
-    left: 470px;
+    bottom: -10.5px;
+    left: -33.8px;
 
     z-index: 4;
 }
