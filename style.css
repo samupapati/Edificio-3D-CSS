@@ -35,9 +35,11 @@
     --grama3: #7DB43B;
     --janela1: #8DDBF0;
     --janela2: #53AFF6;
-    --janela-sombra1: #E0F3FB;
-    --janela-sombra2: #95B7E3;
-}
+    --janela-sombra1: #f1f1f1;
+    --janela-sombra2: #a5a5a5;
+    --sombra: rgba(0, 0, 0, 0.2);
+    --sombra2: rgba(0, 0, 0, 0.582);
+}   
 
 *{
     margin: 0; padding: 0;
@@ -74,6 +76,29 @@ body{
     margin: 0 auto;
 }
 
+.chao::before{
+    content: '';
+    width: 82%;
+    height: 20%;
+    position: absolute;
+    left: 0;
+    bottom: 50px;
+
+    background-image: linear-gradient(to bottom, var(--sombra) 50%, transparent);
+}
+
+.chao::after{
+    content: '';
+    width: 20%;
+    height: 82%;
+    position: absolute;
+    right: 50px;
+    top: 0;
+
+    /* background-color: red; */
+    background-image: linear-gradient(to right, var(--sombra) 50%, transparent);
+}
+
 .chao-baixo{
     width: 374px;
     height: 10px;
@@ -96,6 +121,50 @@ body{
     left: initial;
     right: 86px;
 }
+
+.chao-sombra-bloco-1{
+    width: 137px;
+    height: 10px;
+    background-image: linear-gradient(to bottom, var(--sombra) ,transparent);
+    transform: rotate(2deg);
+    position: absolute;
+    bottom: 80px;
+    left: 65px;
+}
+
+.chao-sombra-bloco-2-esquerda{
+    width: 150px;
+    height: 10px;
+    background-image: linear-gradient(to bottom, var(--sombra) ,transparent);
+    transform: rotate(2deg);
+    position: absolute;
+    bottom: 90px;
+    left: 200px;
+}
+
+.chao-sombra-bloco-2-direita{
+    width: 10px;
+    height: 70px;
+    background-image: linear-gradient(to bottom, var(--sombra) ,transparent);
+    transform: rotate(-1deg);
+    position: absolute;
+    bottom: 92px;
+    right: 85px;
+}
+
+.chao-sombra-bloco-3{
+    width: 10px;
+    height: 134px;
+    background-image: linear-gradient(to bottom, var(--sombra) ,transparent);
+    transform: rotate(-2deg);
+    position: absolute;
+    top: 44px;
+    right: 62px;
+}
+
+
+
+
 
 
 
@@ -134,6 +203,17 @@ body{
     z-index: 2;
 }
 
+.bloco-1-lado::after{
+    content: '';
+    width: 139px;
+    height: 12px;
+    transform: rotate(1deg);
+    position: absolute;
+    left: 23px;
+    top: 50px;
+    background-image: linear-gradient(to top, var(--sombra), transparent);
+}
+
 .bloco-1-teto-baixo-esquerda{
     width: 100px;
     height: 15px;
@@ -163,6 +243,16 @@ body{
     left: 220px;
 }
 
+.bloco-1-teto-cima-esquerda::after{
+    content: '';
+    width: 10%;
+    height: 100%;
+    position: absolute;
+    top: 0px;
+    left: 30px;
+    background-image: linear-gradient(to top, var(--sombra), transparent);
+}
+
 .bloco-1-teto-parede-esquerda{
     width: 130px;
     height: 15px;
@@ -175,6 +265,16 @@ body{
     ;
     bottom: 635px;
     left: 242px;
+}
+
+.bloco-1-teto-parede-esquerda::after{
+    content: '';
+    width: 10%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 20px;
+    background-image: linear-gradient(to top, gray, var(--sombra));
 }
 
 .bloco-1-tijolo-frente{
@@ -232,6 +332,16 @@ body{
         rotateZ(45deg);
     bottom: 540px;
     left: 300px;
+}
+
+.bloco-1-teto-chao::after{
+    content: '';
+    width: 20%;
+    height: 40%;
+    position: absolute;
+    top: 41px;
+    right: 77px;
+    background-image: linear-gradient(to right, var(--sombra), transparent);
 }
 
 .bloco-1-teto-baixo-direita{
@@ -293,46 +403,47 @@ body{
 }
 
 .bloco-1-janelas-janela{
-    width: 70px;
-    height: 30px;
+    width: 80px;
+    height: 37px;
     background-image: linear-gradient(to left, var(--janela2), var(--janela1));
     position: absolute;
     transform: 
         rotate(20deg)
         skewX(20deg)
     ;
-    bottom: 0px;
-    left: -20px;
+    bottom: -7px;
+    left: -30px;
 
     z-index: 3;
 }
 
 .bloco-1-janelas-parede-baixo{
-    width: 70px;
+    width: 79px;
     height: 7px;
     background-image: linear-gradient(to left, var(--janela-sombra2), var(--janela-sombra1));
     position: absolute;
     transform: 
         rotate(20deg)
-        skewX(-50deg)
+        skewX(20deg)
     ;
-    bottom: -6px;
-    left: -24px;
+    bottom: -8px;
+    left: -29px;
 
     z-index: 3;
 }
 
 .bloco-1-janelas-parede-cima{
     width: 10px;
-    height: 30px;
+    height: 36px;
     background-image: linear-gradient(to bottom, var(--janela-sombra2), var(--janela-sombra1));
     position: absolute;
     transform: 
         rotate(-20deg)
         skewX(-20deg)
+        skewY(33deg)
     ;
-    bottom: 10px;
-    left: -27px;
+    bottom: 6px;
+    left: -28px;
 
 
     z-index: 3;
@@ -423,6 +534,16 @@ body{
     z-index: 3;
 }
 
+.bloco-2-teto-baixo-esquerda::after{
+    content: '';
+    width: 90%;
+    height: 100%;
+    position: absolute;
+    top: -10px;
+    left: 15px;
+    background-image: linear-gradient(to top, var(--sombra), transparent);
+}
+
 .bloco-2-teto-baixo-direita{
     width: 155px;
     height: 10px;
@@ -436,6 +557,16 @@ body{
     left: 444px;
 
     z-index: 3;
+}
+
+.bloco-2-teto-baixo-direita::after{
+    content: '';
+    width: 80%;
+    height: 100%;
+    position: absolute;
+    top: -10px;
+    right: 19px;
+    background-image: linear-gradient(to top, var(--sombra), transparent);
 }
 
 .bloco-2-teto-parede-esquerda{
@@ -485,6 +616,16 @@ body{
     z-index: 0;
 }
 
+.bloco-2-teto-cima-esquerda::after{
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 20px;
+    left: -22px;
+    background-image: linear-gradient(to bottom, var(--sombra), transparent);
+}
+
 .bloco-2-teto-cima-direita{
     width: 95px;
     height: 5px;
@@ -498,6 +639,16 @@ body{
     left: 473px;
 
     z-index: 0;
+}
+
+.bloco-2-teto-cima-direita::after{
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 17px;
+    left: 31px;
+    background-image: linear-gradient(to bottom, var(--sombra), transparent);
 }
 
 .bloco-2-janelas{
@@ -521,7 +672,7 @@ body{
 }
 
 .bloco-2-janelas-canto-direito{
-    width: 80px;
+    width: 90px;
     height: 30px;
     background-image: linear-gradient(to right, var(--janela2), var(--janela1));
     position: absolute;
@@ -535,7 +686,7 @@ body{
 }
 
 .bloco-2-janelas-canto-esquerdo{
-    width: 80px;
+    width: 90px;
     height: 30px;
     background-image: linear-gradient(to left, var(--janela2), var(--janela1));
     position: absolute;
@@ -544,22 +695,24 @@ body{
         skewX(20deg)
     ;
     bottom: -30px;
-    left: -75px;
+    left: -84px;
 
     z-index: 3;
 }
 
 .bloco-2-janelas-canto-direito-parede-cima{
     width: 10px;
-    height: 30px;
+    height: 33px;
     background-image: linear-gradient(to bottom, var(--janela-sombra2), var(--janela-sombra1));
     position: absolute;
-    transform: 
+    transform:
         rotate(20deg)
         skewX(20deg)
+        skewY(-33deg)
     ;
-    bottom: -17px;
-    left: 77px;
+    
+    bottom: -20px;
+    left: 78px;
 
     z-index: 3;
 }
@@ -596,14 +749,15 @@ body{
 
 .bloco-2-janelas-canto-esquerdo-parede-cima{
     width: 10px;
-    height: 30px;
+    height: 35px;
     background-image: linear-gradient(to bottom, var(--janela-sombra2), var(--janela-sombra1));
     position: absolute;
     transform: 
         rotate(-20deg)
         skewX(-20deg)
+        skewY(33deg)
     ;
-    bottom: -18px;
+    bottom: -21px;
     left: -83px;
 
 
@@ -611,31 +765,31 @@ body{
 }
 
 .bloco-2-janelas-esquerda{
-    width: 40px;
-    height: 30px;
+    width: 50px;
+    height: 37px;
     background-image: linear-gradient(to left, var(--janela2), var(--janela1));
     position: absolute;
     transform: 
         rotate(20deg)
         skewX(20deg)
     ;
-    bottom: -3px;
-    left: -135px;
+    bottom: -9px;
+    left: -145px;
 
     z-index: 3;
 }
 
 .bloco-2-janelas-esquerda-parede-baixo{
-    width: 40px;
+    width: 50px;
     height: 7px;
     background-image: linear-gradient(to left, var(--janela-sombra2), var(--janela-sombra1));
     position: absolute;
     transform: 
         rotate(20deg)
-        skewX(-50deg)
+        skewX(20deg)  
     ;
-    bottom: -9px;
-    left: -140px;
+    bottom: -10px;
+    left: -145px;
 
     z-index: 3;
 }
@@ -648,8 +802,9 @@ body{
     transform: 
         rotate(-20deg)
         skewX(-20deg)
+        skewY(33deg)
     ;
-    bottom: 2px;
+    bottom: 5px;
     left: -144px;
 
 
@@ -675,7 +830,8 @@ body{
 .bloco-3-lado{
     width: 100px;
     height: 350px;
-    background-image: radial-gradient(var(--bloco3-roxo1) 40%, var(--bloco3-roxo2));
+    /* background-image: radial-gradient(var(--bloco3-roxo1) 40%, var(--bloco3-roxo2)); */
+    background-image: linear-gradient(to left, var(--bloco3-roxo1) 40%, var(--bloco3-roxo2));
     position: absolute;
     transform: 
         rotate(20deg)
@@ -683,6 +839,17 @@ body{
     ;
     bottom: 250px;
     left: 537px;
+}
+
+.bloco-3-lado::after{
+    content: '';
+    width: 55px;
+    height: 15px;
+    transform: rotate(0deg);
+    position: absolute;
+    top: 56px;
+    left: 0;
+    background-image: linear-gradient(to top, var(--sombra), transparent);
 }
 
 .bloco-3-teto-chao{
@@ -695,6 +862,26 @@ body{
         rotateZ(45deg);
     bottom: 562px;
     left: 568px;
+}
+
+.bloco-3-teto-chao::before{
+    content: '';
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top: 10px;
+    right: 36px;
+    background-image: linear-gradient(to top, var(--sombra), transparent);
+}
+
+.bloco-3-teto-chao::after{
+    content: '';
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top: 27px;
+    left: 0;
+    background-image: linear-gradient(to left, var(--sombra), transparent);
 }
 
 .bloco-3-teto-chao-2{
@@ -717,6 +904,18 @@ body{
     ;
     bottom: 635px;
     left: 610px;
+}
+
+.bloco-3-caixa-teto::after{
+    content: '';
+    width: 100%;
+    height: 25%;
+    position: absolute;
+    left: 30px;
+    bottom: -22px;
+    background-image: linear-gradient(to bottom, var(--sombra), transparent);
+
+    /* background-color: red; */
 }
 
 .bloco-3-caixa-teto{
@@ -758,6 +957,18 @@ body{
     left: 655px;
 }
 
+.bloco-3-tijolo-frente::after{
+    content: '';
+    width: 5px;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: -4px;
+    background-image: linear-gradient(to right, var(--sombra), transparent);
+
+    /* background-color: red; */
+}
+
 .bloco-3-tijolo-teto{
     width: 70px;
     height: 10px;
@@ -786,7 +997,7 @@ body{
 
 .bloco-3-garagem-chao{
     width: 60px;
-    height: 10px;
+    height: 11px;
     background-color: var(--chao-garagem);
     position: absolute;
     transform: 
@@ -802,12 +1013,9 @@ body{
     height: 15px;
     background-color: var(--chao-garagem);
     position: absolute;
-    transform: 
-        rotate(0deg)
-        skewX(0deg)
-    ;
-    bottom: 225px;
+    bottom: 226px;
     left: 645px;
+    clip-path: polygon(0 0, 0 100%, 100% 65%);
 }
 
 .bloco-3-garagem-portao{
@@ -882,6 +1090,21 @@ body{
     left: 530px;
 }
 
+.grama-sombra{
+    width: 160px;
+    height: 60px;
+    background-image: linear-gradient(to top, var(--sombra), transparent);
+    position: absolute;
+    transform: 
+        rotate(-20deg)
+        skewX(-20deg)
+    ;
+    bottom: 9px;
+    left: -85px;
+
+    z-index: 4;
+}
+
 .grama-frente{
     width: 100px;
     height: 40px;
@@ -925,4 +1148,41 @@ body{
     left: -33.8px;
 
     z-index: 4;
+}
+
+.grama-lado::before{
+    content: '';
+    width: 90%;
+    height: 100%;
+    position: absolute;
+    top: -79px;
+    left: 111px;
+    background-image: linear-gradient(to top, var(--sombra2), transparent);
+}
+
+.chao-sombra-grama{
+    width: 10px;
+    height: 140px;
+    background-image: linear-gradient(to right, var(--sombra), transparent);
+    position: absolute;
+    bottom: 150px;
+    right: 32px;
+
+}
+
+.chao-sombra-grama-2{
+    width: 30px;
+    height: 40px;
+    background-image: linear-gradient(to right, var(--sombra) 100%, transparent);
+    transform: rotate(-40deg);
+    position: absolute;
+    bottom: 280px;
+    right: 50px;
+}
+
+
+@media all and (max-width: 768px){
+    #predio{
+        transform: scale(.6);
+    }
 }
