@@ -1,6 +1,6 @@
 # Edíficio 3D
 
-![Page image](https://github.com/samupapati/Edificio-3D-CSS/blob/master/page.png)
+![Page image](https://github.com/samupapati/Edificio-3D-CSS/blob/master/pageimg.png)
 [Visitar](https://samupapati.github.io/Edificio-3D-CSS/index.html) 
 
 **Feito com**
